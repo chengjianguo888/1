@@ -143,6 +143,9 @@ function LoginGUI()
         'HorizontalAlignment','center', ...
         'BackgroundColor',    'none');
 
+    % ---- 应用中文字体（防止乱码）----
+    applyFont(fig, getCJKFont());
+
     % ---- 回调函数 ----
     function onLogin(~, ~)
         username = strtrim(edtUser.Value);
